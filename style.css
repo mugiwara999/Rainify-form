@@ -1,0 +1,60 @@
+:root {
+  --color: white;
+}
+
+@font-face {
+  font-family: "amanda_black";
+  src: url(./AnandaBlackPersonalUseRegular-rg9Rx.ttf);
+}
+
+body {
+  display: flex;
+  /* flex-direction: column; */
+  margin: 0;
+  background-color: #0b3827;
+  color: var(--color);
+  padding: 0;
+  gap: 40px;
+}
+
+img {
+  width: auto;
+
+  height: 100vh;
+}
+
+.form {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  min-width: calc(100vh * 1708 / 2560);
+  margin: 30px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex: 1;
+}
+
+.form_parent {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.info {
+  display: flex;
+}
+
+.intro {
+  font-size: 3rem;
+  line-height: 5rem;
+  font-family: amanda_black;
+  word-spacing: 7px;
+  letter-spacing: 3px;
+}
+
+.intro::first-letter {
+  font-size: 5rem;
+}
