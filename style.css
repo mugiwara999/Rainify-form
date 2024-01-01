@@ -1,17 +1,32 @@
 :root {
-  --color: white;
+  --color: #04151f;
 }
 
 @font-face {
   font-family: "amanda_black";
-  src: url(./AnandaBlackPersonalUseRegular-rg9Rx.ttf);
+  src: url(./assets/AnandaBlackPersonalUseReuglar-rg9Rx.ttf);
+}
+
+@font-face {
+  font-family: "fonts_light";
+  src: url(./assets/MontserratLight-6YemM.otf);
+}
+
+@font-face {
+  font-family: "fonts_bold";
+  src: url(./assets/MontserratBold-DOWZd.ttf);
+}
+
+@font-face {
+  font-family: "norse_bold";
+  src: url(./assets/Norse-Bold.otf);
 }
 
 body {
   display: flex;
   /* flex-direction: column; */
   margin: 0;
-  background-color: #0b3827;
+  background-color: #edf2fb;
   color: var(--color);
   padding: 0;
   gap: 40px;
@@ -27,29 +42,26 @@ img {
   padding-top: 20px;
   display: flex;
   flex-direction: column;
-  width: 50vw;
   min-width: calc(100vh * 1708 / 2560);
   margin: 30px;
-  justify-content: space-between;
-  align-items: center;
   gap: 40px;
-  flex: 1;
-}
-
-.form_parent {
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
+  flex: auto;
+  /* flex-shrink: 0; */
 }
 
 .info {
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-around;
+  /* gap: 20px; */
+  box-sizing: border-box;
 }
 
 .intro {
   font-size: 3rem;
   line-height: 5rem;
+  text-align: center;
   font-family: amanda_black;
   word-spacing: 7px;
   letter-spacing: 3px;
@@ -57,4 +69,110 @@ img {
 
 .intro::first-letter {
   font-size: 5rem;
+}
+
+.info form div div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.info form {
+  flex: auto;
+}
+
+form {
+  display: flex;
+  padding: 0 30px;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+form div {
+  width: 100%;
+  margin: 20px;
+}
+
+input {
+  width: 200px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: fonts_bold;
+  height: 30px;
+  padding-left: 5px;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #0096c7;
+}
+
+input::placeholder {
+  font-size: 0.8rem;
+}
+
+input[type="email"]:invalid {
+  outline: none;
+  border: 2px solid #e5383b;
+}
+
+label {
+  font-size: 0.9rem;
+}
+
+div:only-child(button) {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.btn {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  flex: 1;
+}
+
+button {
+  border: none;
+  border-radius: 3px;
+
+  padding: 10px 40px;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #5995da;
+}
+
+button:hover {
+  background-color: #76aeed;
+}
+
+button:active {
+  background-color: #407fc7;
+}
+
+.logo img {
+  width: 90px;
+  height: auto;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  position: absolute;
+  transform: translateY(-550px);
+  color: white;
+  font-size: 7rem;
+  align-items: center;
+  font-family: norse_bold;
+}
+
+.image {
+  position: relative;
 }
